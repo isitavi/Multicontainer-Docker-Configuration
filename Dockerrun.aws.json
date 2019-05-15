@@ -1,0 +1,26 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions":[
+        {
+            "name":"nginx",
+            "image": "isitavi/multi-nginx",
+            "hostname": "nginx",
+            "essential": true
+        },
+        
+        {
+            "name":"ServerSide",
+            "image": "isitavi/multi-server",
+            "hostname": "api",
+            "essential": false
+        },
+
+        {
+            "name":"worker",
+            "image": "isitavi/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        }
+        
+    ]
+}
