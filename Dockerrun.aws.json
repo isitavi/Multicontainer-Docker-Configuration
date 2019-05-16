@@ -15,21 +15,25 @@
             "links": [
                 "client",
                 "ServerSide"
-            ]
+            ],
+	   "memory":128
         },
         
         {
             "name":"ServerSide",
             "image": "isitavi/multi-server",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+	    "memory":128
         },
 
         {
             "name":"worker",
             "image": "isitavi/multi-worker",
             "hostname": "worker",
-            "essential": false
+            "essential": false,
+
+	    "memory":128
         }
         
     ]
